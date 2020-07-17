@@ -11,12 +11,11 @@ string solution(string s, int n) {
             continue;
         }else if(element>='a' && element<='z'){
             element += n;
-            s[i] = element;
-            transform(s.begin()+i,s.begin()+i+1,tolower);
+            s[i] = tolower(element);
+
         }else{
             element += n;
-            s[i] = element;
-            transform(s.begin()+i,s.begin()+i+1,toupper);
+            s[i] = toupper(element);
         }
     }
     answer = s;
