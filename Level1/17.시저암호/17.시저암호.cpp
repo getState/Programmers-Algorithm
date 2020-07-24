@@ -11,11 +11,20 @@ string solution(string s, int n) {
             continue;
         }else if(element>='a' && element<='z'){
             element += n;
-            s[i] = tolower(element);
+            if(element>='a' && element<='z'){
+                s[i] = element;
+            }else{
+                s[i] = 'a' + element - 'z' -1;
+            }
 
         }else{
             element += n;
-            s[i] = toupper(element);
+            if(element>='A' && element<='Z'){
+                s[i] = element;
+            }else{
+                s[i] = 'A' + element - 'Z' -1;
+            }
+            
         }
     }
     answer = s;
